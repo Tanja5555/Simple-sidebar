@@ -1,0 +1,401 @@
+﻿body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato',sans-serif;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .figureMargin {
+        margin-left: 40%;
+    }
+    h1{
+        font-size:30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .figureMargin {
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 360px) {
+    .figureMargin {
+        margin-left: 15%;
+    }
+}
+
+.textMargin{
+    margin-bottom:30px;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+    float: left;
+}
+
+.logoText {
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+    vertical-align: middle;
+    letter-spacing: 2px;
+}
+
+.logoText:hover{
+    color:red;
+}
+
+.titleWidth{
+    max-width:460px;
+    width:100%;
+}
+
+.titleWidth a{
+    text-transform: uppercase;
+    color:black;
+    text-decoration: none;
+    border-bottom: 1px solid gray;
+}
+
+.titleWidth:hover a{
+    color:red;
+    border-bottom: none;
+}
+
+.container {
+    width: 1024px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.figureMargin {
+    margin-bottom: 25px;
+}
+
+figure {
+    width: 220px;
+    height: 220px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+    figure img {
+        width: 220px;
+        height: 220px;
+        opacity: 0.5;
+    }
+
+    figure:hover img {
+        opacity: 1;
+    }
+
+figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: table;
+    color: #2c3e50;
+}
+
+    figcaption div {
+        width: 220px;
+        position: relative;
+        text-align: center;
+        top: 90px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    figcaption p {
+        width: 220px;
+        position: relative;
+        text-align: center;
+        top: 90px;
+        opacity: 0;
+        font-weight: normal;
+        text-transform: none;
+    }
+
+figure:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+    figure:hover div {
+        top: 85px;
+    }
+
+    figure:hover p {
+        opacity: 1;
+    }
+
+/* ----   Wrappers    ------*/
+#wrapper {
+    margin-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    left: auto;
+    right: 0;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #1a1a1a;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+    #sidebar-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 220px;
+}
+
+#page-content-wrapper {
+    width: 100vw;
+    padding-top: 70px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+}
+/* ------  Sidebar nav styles----- */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .sidebar-nav li {
+        position: relative;
+        line-height: 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+.frame {
+    border: 1px solid gray;
+    width: 230px;
+    height: 230px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+    .frame:hover {
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.5);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.5);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.5);
+        transition: all 200ms ease-in;
+        transform: scale(1.1);
+    }
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    /* margin-left: auto; margin-right: auto; */
+}
+
+hr {
+    margin-left: 30px;
+    margin-right: 20px;
+    border-top: 1px solid gray;
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;
+}
+
+    .sidebar-nav li a:hover,
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus,
+    .sidebar-nav li.open a:hover,
+    .sidebar-nav li.open a:active,
+    .sidebar-nav li.open a:focus {
+        color: red;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 44px;
+}
+
+/*----- Hamburger-Cross ------*/
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: auto;
+    right: 0;
+    z-index: 999;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background: transparent;
+    border: none;
+}
+
+    .hamburger:hover,
+    .hamburger:focus,
+    .hamburger:active {
+        outline: none;
+    }
+
+    .hamburger.is-closed,
+    .hamburger.is-open {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+        .hamburger.is-closed .hamb-top,
+        .hamburger.is-closed .hamb-middle,
+        .hamburger.is-closed .hamb-bottom,
+        .hamburger.is-open .hamb-top,
+        .hamburger.is-open .hamb-middle,
+        .hamburger.is-open .hamb-bottom {
+            position: absolute;
+            left: 0;
+            height: 4px;
+            width: 100%;
+        }
+
+        .hamburger.is-closed .hamb-top,
+        .hamburger.is-closed .hamb-middle,
+        .hamburger.is-closed .hamb-bottom {
+            background-color: #1a1a1a;
+        }
+
+        .hamburger.is-closed .hamb-top {
+            top: 5px;
+            -webkit-transition: all 0.35s ease-in-out;
+        }
+
+        .hamburger.is-closed .hamb-middle {
+            top: 50%;
+            margin-top: -2px;
+        }
+
+        .hamburger.is-closed .hamb-bottom {
+            bottom: 5px;
+            -webkit-transition: all 0.35s ease-in-out;
+        }
+
+        .hamburger.is-closed:hover .hamb-top {
+            top: 0;
+            -webkit-transition: all 0.35s ease-in-out;
+        }
+
+        .hamburger.is-closed:hover .hamb-bottom {
+            bottom: 0;
+            -webkit-transition: all 0.35s ease-in-out;
+        }
+
+    .hamburger.is-open {
+        left: auto;
+        right: 220px;
+    }
+
+        .hamburger.is-open .hamb-top,
+        .hamburger.is-open .hamb-middle,
+        .hamburger.is-open .hamb-bottom {
+            background-color: #1a1a1a;
+        }
+
+        .hamburger.is-open .hamb-top,
+        .hamburger.is-open .hamb-bottom {
+            top: 50%;
+            margin-top: -2px;
+        }
+
+        .hamburger.is-open .hamb-top {
+            -webkit-transform: rotate(45deg);
+            -webkit-transition: -webkit-transform 0.2s cubic-bezier(.73,1,.28,.08);
+        }
+
+        .hamburger.is-open .hamb-middle {
+            display: none;
+        }
+
+        .hamburger.is-open .hamb-bottom {
+            -webkit-transform: rotate(-45deg);
+            -webkit-transition: -webkit-transform 0.2s cubic-bezier(.73,1,.28,.08);
+        }
+/*  ------ Overlay ------*/
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(250,250,250,.8);
+    z-index: 1;
+}
